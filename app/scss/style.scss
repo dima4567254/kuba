@@ -4,6 +4,135 @@
 @import 'global';
 @import 'libs';
 
+
+
+.intro {
+
+    height: 93vh;
+    background-image: url('../images/cuba-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    margin-bottom: 25px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0px;
+        color: $white;
+        font-family: $georgia;
+        height: 100%;
+        border: 2px solid red;
+        border-bottom: none;
+    }
+
+    &__info {
+        font-size: 200px;
+        font-weight: 700;
+        margin: auto;
+        display: inline;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        display: inline-flex;
+        white-space: nowrap;
+        align-items: center;
+        margin-bottom: -12px;
+
+        &::after,
+        &::before {
+            content: "";
+            border-top: 2px solid red;
+            width: 100%;
+        }
+
+        &::before {
+            margin-right: 30px;
+        }
+
+        &::after {
+            margin-left: 30px;
+        }
+    }
+}
+
+.menu {
+    margin-bottom: 130px;
+    &__btn {
+        display: none;
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            color: $ac;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+
+
+        .menu__link--active {
+            color: $black2;
+        }
+    }
+
+    &__link {
+        font-family: $Lato;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: $silver1;
+        transition: color 0.5s;
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            color: $ac;
+            
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+
+
+
+
+
 /*медия всегда должны быть в низу */
 
 /*.video {
